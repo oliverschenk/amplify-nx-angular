@@ -1,0 +1,17 @@
+{
+  "projectName": "amplifynx",
+  "version": "3.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "angular",
+    "config": {
+      "SourceDir": "libs/appsync/src/lib",
+      "DistributionDir": "dist/apps/todo-app",
+      "BuildCommand": "npm.cmd run-script build",
+      "StartCommand": "npm.cmd run-script start"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}

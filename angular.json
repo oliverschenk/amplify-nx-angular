@@ -1,0 +1,310 @@
+{
+  "version": 1,
+  "projects": {
+    "todo-app": {
+      "projectType": "application",
+      "root": "apps/todo-app",
+      "sourceRoot": "apps/todo-app/src",
+      "prefix": "rcf",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/todo-app",
+            "index": "apps/todo-app/src/index.html",
+            "main": "apps/todo-app/src/main.ts",
+            "polyfills": "apps/todo-app/src/polyfills.ts",
+            "tsConfig": "apps/todo-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/todo-app/src/favicon.ico",
+              "apps/todo-app/src/assets"
+            ],
+            "styles": ["apps/todo-app/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/todo-app/src/environments/environment.ts",
+                  "with": "apps/todo-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "todo-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "todo-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "todo-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/todo-app/src/**/*.ts",
+              "apps/todo-app/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/todo-app"],
+          "options": {
+            "jestConfig": "apps/todo-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "todo-app-e2e": {
+      "root": "apps/todo-app-e2e",
+      "sourceRoot": "apps/todo-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/todo-app-e2e/cypress.json",
+            "tsConfig": "apps/todo-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "todo-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "todo-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/todo-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "appsync": {
+      "projectType": "library",
+      "root": "libs/appsync",
+      "sourceRoot": "libs/appsync/src",
+      "prefix": "rcf",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/appsync/src/**/*.ts",
+              "libs/appsync/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/appsync"],
+          "options": {
+            "jestConfig": "libs/appsync/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "todo-ui": {
+      "projectType": "library",
+      "root": "libs/todo-ui",
+      "sourceRoot": "libs/todo-ui/src",
+      "prefix": "rcf",
+      "architect": {
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/todo-ui/src/**/*.ts",
+              "libs/todo-ui/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/todo-ui"],
+          "options": {
+            "jestConfig": "libs/todo-ui/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "second-app": {
+      "projectType": "application",
+      "root": "apps/second-app",
+      "sourceRoot": "apps/second-app/src",
+      "prefix": "rcf",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/second-app",
+            "index": "apps/second-app/src/index.html",
+            "main": "apps/second-app/src/main.ts",
+            "polyfills": "apps/second-app/src/polyfills.ts",
+            "tsConfig": "apps/second-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/second-app/src/favicon.ico",
+              "apps/second-app/src/assets"
+            ],
+            "styles": ["apps/second-app/src/styles.css"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/second-app/src/environments/environment.ts",
+                  "with": "apps/second-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "second-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "second-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "second-app:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "apps/second-app/src/**/*.ts",
+              "apps/second-app/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/apps/second-app"],
+          "options": {
+            "jestConfig": "apps/second-app/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
+    "second-app-e2e": {
+      "root": "apps/second-app-e2e",
+      "sourceRoot": "apps/second-app-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/second-app-e2e/cypress.json",
+            "tsConfig": "apps/second-app-e2e/tsconfig.e2e.json",
+            "devServerTarget": "second-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "second-app:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/second-app-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    },
+    "@nrwl/angular:component": {
+      "style": "css"
+    }
+  },
+  "defaultProject": "todo-app"
+}

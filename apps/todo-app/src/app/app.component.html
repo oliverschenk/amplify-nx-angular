@@ -1,0 +1,10 @@
+<amplify-authenticator>
+  <amplify-sign-up
+    slot="sign-up"
+    usernameAlias="email"
+    [formFields]="formFields"
+  ></amplify-sign-up>
+  <amplify-sign-in slot="sign-in" usernameAlias="email"></amplify-sign-in>
+</amplify-authenticator>
+
+<rcf-todo-page *ngIf="hydrated && isLoggedIn"></rcf-todo-page>
