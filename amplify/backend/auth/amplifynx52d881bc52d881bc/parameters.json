@@ -31,8 +31,10 @@
     ],
     "userpoolClientReadAttributes": [
         "email",
+        "email_verified",
         "name",
         "phone_number",
+        "phone_number_verified",
         "custom:business"
     ],
     "userpoolClientLambdaRole": "amplif52d881bc_userpoolclient_lambda_role",
