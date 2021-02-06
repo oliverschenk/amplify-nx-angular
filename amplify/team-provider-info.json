@@ -1,19 +1,36 @@
 {
-  "dev": {
+  "main": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-amplifynx-dev-153303-authRole",
-      "UnauthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-dev-153303-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-dev-153303-authRole",
+      "AuthRoleName": "amplify-amplifynx-main-225330-authRole",
+      "UnauthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-main-225330-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-main-225330-authRole",
       "Region": "ap-southeast-2",
-      "DeploymentBucketName": "amplify-amplifynx-dev-153303-deployment",
-      "UnauthRoleName": "amplify-amplifynx-dev-153303-unauthRole",
-      "StackName": "amplify-amplifynx-dev-153303",
-      "StackId": "arn:aws:cloudformation:ap-southeast-2:625395662669:stack/amplify-amplifynx-dev-153303/e51435d0-6071-11eb-ab39-0acfa5574c02",
-      "AmplifyAppId": "d3050kj9m0i9nx"
+      "DeploymentBucketName": "amplify-amplifynx-main-225330-deployment",
+      "UnauthRoleName": "amplify-amplifynx-main-225330-unauthRole",
+      "StackName": "amplify-amplifynx-main-225330",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:625395662669:stack/amplify-amplifynx-main-225330/155384f0-688b-11eb-821c-029b07424a9c",
+      "AmplifyAppId": "djbc1kvjz6x70"
     },
     "categories": {
       "auth": {
-        "amplifynx009af8ef009af8ef": {},
+        "amplifynx52d881bc52d881bc": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifynx-dev-232650-authRole",
+      "UnauthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-dev-232650-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::625395662669:role/amplify-amplifynx-dev-232650-authRole",
+      "Region": "ap-southeast-2",
+      "DeploymentBucketName": "amplify-amplifynx-dev-232650-deployment",
+      "UnauthRoleName": "amplify-amplifynx-dev-232650-unauthRole",
+      "StackName": "amplify-amplifynx-dev-232650",
+      "StackId": "arn:aws:cloudformation:ap-southeast-2:625395662669:stack/amplify-amplifynx-dev-232650/bd4cef80-688f-11eb-b8c5-0666a768faee",
+      "AmplifyAppId": "djbc1kvjz6x70"
+    },
+    "categories": {
+      "auth": {
         "amplifynx52d881bc52d881bc": {}
       }
     }

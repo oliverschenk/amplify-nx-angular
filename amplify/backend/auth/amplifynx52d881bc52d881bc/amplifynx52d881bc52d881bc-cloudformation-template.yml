@@ -129,7 +129,6 @@ Parameters:
   userPoolGroupList:
     Type: CommaDelimitedList
       
-            
   serviceName:
     Type: String
   
@@ -150,6 +149,7 @@ Parameters:
   dependsOn:
     Type: CommaDelimitedList
       
+            
 Conditions:
   ShouldNotCreateEnvResources: !Equals [ !Ref env, NONE ]
 
@@ -214,6 +214,12 @@ Resources:
           Name: phone_number
           Required: true
           Mutable: true
+        
+        -
+          Name: business
+          Required: false
+          Mutable: true
+          AttributeDataType: String
         
       
       
